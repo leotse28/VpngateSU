@@ -1,0 +1,89 @@
+[package]
+name = "vpngate-client"
+version = "0.3.16"
+edition = "2021"
+description = "Minimal Rust client for VPNGate volunteer nodes over MS-SSTP + PPP, exposing a local SOCKS5 port (no TUN, no GUI)"
+license = "MIT"
+
+[[bin]]
+name = "vpngate-client"
+path = "src/main.rs"
+
+[[bin]]
+name = "vpngate-gui"
+path = "src/bin/vpngate-gui.rs"
+# The GUI binary needs the `gui` feature; without it cargo skips this
+# target instead of failing on the missing eframe/rfd/arboard deps
+# (so `cargo check --no-default-features` stays usable for the
+# Android .so build, which only needs the lib + CLI).
+required-features = ["gui"]
+
+[lib]
+name = "vpngate_client"
+path = "src/lib.rs"
+
+[features]
+default = ["gui"]
+# Desktop GUI only: eframe/egui (GUI binary), rfd (file dialogs),
+# arboard (clipboard), image (tray/window icon PNG decoding in
+# src/tray.rs). The library core — SSTP/PPP tunnel, SOCKS5 server,
+# node list, DoH — needs none of these; Android builds the lib with
+# --no-default-features and links it as a .so.
+# egui_kittest stays an unconditional dev-dependency: cargo forbids
+# optional dev-dependencies. It is only used by the GUI binary's
+# #[cfg(test)] module, so a non-test --no-default-features build
+# (the Android .so case) never compiles it; `cargo test
+# --no-default-features --lib` still builds it as a dev-dep, which
+# is harmless — the lib itself no longer depends on any GUI crate.
+gui = ["dep:eframe", "dep:rfd", "dep:arboard", "dep:image"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-rustls = "0.26"
+rustls = { version = "0.23", features = ["tls12"] }
+webpki-roots = "0.26"
+# System certificate store (Windows: the Windows certificate store;
+# Linux/macOS: the usual system bundle). Loaded in addition to the
+# Mozilla roots in verified_tls_config(); see src/net.rs.
+rustls-native-certs = "0.8"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+rand = "0.8"
+# Local timestamps for the GUI file log (src/filelog.rs).
+chrono = "0.4"
+eframe = { version = "0.36", optional = true }
+rfd = { version = "0.18.0", optional = true }
+arboard = { version = "3", optional = true }
+# Decode assets/icon.ico's PNG entry into RGBA for the tray icon
+# (src/tray.rs, v3.12); already in the tree via arboard/eframe.
+# PNG only — default features would pull every decoder into both
+# binaries (measured +10 MB on the GUI); eframe uses png-only too.
+# GUI-only: only src/tray.rs (gated behind the `gui` feature) uses it.
+image = { version = "0.25", default-features = false, features = ["png"], optional = true }
+
+# Windows only: verified HTTPS (vpngate.net API / web scrape, DoH,
+# front-proxy test) and node SSTP both go through the OS TLS stack
+# (SChannel) instead of rustls, so the handshake looks like the
+# browser's — rustls' ClientHello was getting a fatal HandshakeFailure
+# from a middlebox on Leo's network path while Chrome through the
+# same front proxy opened the same URLs fine (v3.1), and rustls SSTP
+# handshakes were then dying with "tls handshake eof" while SChannel
+# HTTPS through the same proxy worked (v3.2). Node SSTP stays
+# accept-any (self-signed certs) on every platform — only the stack
+# changed, not the verification. Linux/macOS keep rustls + Mozilla
+# roots for verified HTTPS, and never see these two crates (no
+# OpenSSL needed to build on Linux).
+[target.'cfg(windows)'.dependencies]
+native-tls = "0.2"
+tokio-native-tls = "0.3"
+# System tray icon (v3.12, Windows only): minimize-to-tray like
+# v2rayN/NekoBox. 0.19 pairs with eframe 0.36's winit 0.30.
+tray-icon = "0.19"
+
+[dev-dependencies]
+egui_kittest = { version = "0.36", features = ["eframe", "snapshot", "wgpu"] }
+
+[profile.release]
+opt-level = 2

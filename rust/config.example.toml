@@ -1,0 +1,44 @@
+# vpngate-client 配置示例。复制为 config.toml 后修改。
+# 所有项都有默认值；命令行参数会覆盖这里的设置。
+
+# 前置 SOCKS5 代理：连 VPNGate 节点（以及拉节点列表、DoH）时先走它。
+# 不用就把 enabled 设为 false（默认）。
+[front_proxy]
+enabled = false
+addr = "127.0.0.1:1080"
+# username = ""
+# password = ""
+
+# 本地混合代理监听（SOCKS5 + HTTP，同一个端口；隧道起来后，浏览器/应用连这里）。
+[listen]
+addr = "127.0.0.1"
+local_port = 10818
+# allow_lan = true 时，同一个端口再绑 0.0.0.0:local_port（不再另开端口），
+# 局域网设备走本机 IP:10818（相当于 V2Ray 的允许局域网连接，也像 NekoBox 的 Mixed 端口）。
+# 老配置里的 lan_port（v3.7 之前单独的局域网端口）加载时忽略、不报错，保存时不再写出。
+allow_lan = false
+
+# 屏蔽列表：GUI 里“删除选中”删掉的节点主机名记在这里，刷新/抓取/缓存/内嵌加载都会
+# 过滤掉它们；想取消屏蔽就直接改这份记录，删掉那一行主机名，下次刷新它就回来了
+# （v3.10 起没有“恢复已删除”按钮）。
+# blocked_hosts = []
+
+# 系统代理：connect 时把系统代理指到上面的本地端口，退出时还原。
+# 默认关闭；只在需要时打开。
+[system_proxy]
+enabled = false
+# service = "Wi-Fi"   # macOS 的网络服务名，默认 Wi-Fi
+
+# 隧道超时（秒）：SSTP 建连、PPP 取 IP、TCP 握手的单次超时。
+[tunnel]
+timeout_secs = 10
+
+# 界面：节点列表列宽与三个框的高度。改动在图形界面里拖动后自动保存到这里。
+[ui]
+# node_col_widths = [90, 130, 64, 88, 80, 190, 90]
+# list_height：节点列表框高度（像素）。不写 = 没拖过，界面按“面板高 − 250、至少 120 px”
+#   的公式算；拖过一次后写这里，重启后还在（120 px～面板高 − 150 px）。
+# advanced_height：高级设置框高度（像素），默认 240（120～600）。
+# log_height：日志框高度（像素），默认 90（60～400）。
+# advanced_height = 240
+# log_height = 90

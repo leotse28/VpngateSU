@@ -1,0 +1,23 @@
+[package]
+name = "vpngatesu-jni"
+version = "0.1.0"
+edition = "2021"
+description = "JNI bridge (cdylib) between the VpngateSU Kotlin UI and the vendored vpngate-client core"
+license = "MIT"
+
+[lib]
+name = "vpngatesu_jni"
+crate-type = ["cdylib"]
+
+[dependencies]
+# Thin JNI binding only (no GUI crates anywhere in this tree).
+jni = "0.22"
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+# The vendored v3.16 core, GUI feature OFF: tray/eframe/rfd/arboard
+# must never be linked into the Android .so.
+vpngate-client = { path = "..", default-features = false }
+
+# Standalone crate: the parent (../) is a package, not a workspace,
+# so declare our own (empty) workspace to keep cargo from walking up.
+[workspace]

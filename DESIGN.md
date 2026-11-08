@@ -1,6 +1,6 @@
 # VpngateSU 设计文档
 
-- 状态：阶段 0（学习与设计）完成，等待进入阶段 2（动手写移植代码）
+- 状态：阶段 2 Phase A 完成（第一个 APK，debug 0.1.0，2026-11-08）；Phase B 待开始
 - 移植 base：VPNGATE-LITE v3.16，commit `54bf0ad50d9ded6e25c6a7413ae1e8c61ad1ddb4`（main head，2026-11-08）
 - 参考实现：`~/workspace/vpngate-rust-client/`，仓库 `leotse28/VPNGATE-LITE`
 - 目标产物：Android 11+（minSdk 30）可安装的 APK；新库名 `VpngateSU`（Leo 建空库并授权后才 push）

@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Plain white thick-stroke ring on indigo, same motif as the
+         desktop client's v3.15 icon (ring, no fill, no inner symbol). -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="10"
+        android:pathData="M54,22 a32,32 0 1,1 -0.01,0" />
+</vector>

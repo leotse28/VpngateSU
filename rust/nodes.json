@@ -1,0 +1,338 @@
+[
+ {
+  "host": "vpn267947139.opengw.net",
+  "port": 1663,
+  "country": "Japan",
+  "country_code": "🇯🇵 JP",
+  "name": "日本东京 SoftBank原生家宽",
+  "isp": "SoftBank BB",
+  "backups": [
+   "vpn532142349.opengw.net:1394",
+   "vpn964630803.opengw.net:1568"
+  ]
+ },
+ {
+  "host": "vpn547433109.opengw.net",
+  "port": 995,
+  "country": "Japan",
+  "country_code": "🇯🇵 JP",
+  "name": "日本大阪 KDDI光纤家宽",
+  "isp": "KDDI Home Fiber",
+  "backups": [
+   "vpn716187063.opengw.net:1632",
+   "vpn366166401.opengw.net:1817"
+  ]
+ },
+ {
+  "host": "kanratown.opengw.net",
+  "port": 992,
+  "country": "Japan",
+  "country_code": "🇯🇵 JP",
+  "name": "日本爱知 NTT原生家宽",
+  "isp": "NTT Home Fiber",
+  "backups": [
+   "vpn699884073.opengw.net:1556",
+   "vpn615046637.opengw.net:1341"
+  ]
+ },
+ {
+  "host": "vpn210599978.opengw.net",
+  "port": 995,
+  "country": "Korea Republic of",
+  "country_code": "🇰🇷 KR",
+  "name": "韩国首尔 KT原生家宽",
+  "isp": "Korea Telecom",
+  "backups": [
+   "vpn315847091.opengw.net:1840",
+   "vpn624984613.opengw.net:995"
+  ]
+ },
+ {
+  "host": "vpn177463451.opengw.net",
+  "port": 995,
+  "country": "Korea Republic of",
+  "country_code": "🇰🇷 KR",
+  "name": "韩国首尔 SKB原生家宽",
+  "isp": "SK Broadband",
+  "backups": [
+   "vpn890613352.opengw.net:995",
+   "vpn466281884.opengw.net:1900"
+  ]
+ },
+ {
+  "host": "vpn313325973.opengw.net",
+  "port": 995,
+  "country": "Korea Republic of",
+  "country_code": "🇰🇷 KR",
+  "name": "韩国仁川 LGU+原生家宽",
+  "isp": "LG Uplus",
+  "backups": [
+   "vpn176473285.opengw.net:995",
+   "vpn715953533.opengw.net:995"
+  ]
+ },
+ {
+  "host": "vpn473197536.opengw.net",
+  "port": 1475,
+  "country": "United States",
+  "country_code": "🇺🇸 US",
+  "name": "美国洛杉矶 Spectrum原生家宽",
+  "isp": "Charter Spectrum",
+  "backups": [
+   "vpn801494251.opengw.net:1929",
+   "vpn833326008.opengw.net:1414"
+  ]
+ },
+ {
+  "host": "vpn518122287.opengw.net",
+  "port": 1960,
+  "country": "United States",
+  "country_code": "🇺🇸 US",
+  "name": "美国芝加哥 Comcast Xfinity家宽",
+  "isp": "Comcast Xfinity",
+  "backups": [
+   "vpn861257619.opengw.net:1717",
+   "vpn673282738.opengw.net:1815"
+  ]
+ },
+ {
+  "host": "vpn861257619.opengw.net",
+  "port": 1717,
+  "country": "United States",
+  "country_code": "🇺🇸 US",
+  "name": "美国纽约 Verizon Fios原生家宽",
+  "isp": "Verizon Fios",
+  "backups": [
+   "vpn833326008.opengw.net:1414",
+   "vpn164693092.opengw.net:1363"
+  ]
+ },
+ {
+  "host": "vpn942100025.opengw.net",
+  "port": 995,
+  "country": "Canada",
+  "country_code": "🇨🇦 CA",
+  "name": "加拿大温哥华 Bell/Telus原生家宽",
+  "isp": "Bell Canada",
+  "backups": [
+   "vpn638699615.opengw.net:995",
+   "vpn421416087.opengw.net:995"
+  ]
+ },
+ {
+  "host": "vpn986755484.opengw.net",
+  "port": 1852,
+  "country": "Hong Kong",
+  "country_code": "🇭🇰 HK",
+  "name": "中国香港 HKT网上行原生宽频",
+  "isp": "HKT Limited",
+  "backups": [
+   "vpn807319024.opengw.net:1760",
+   "vpn187430919.opengw.net:995"
+  ]
+ },
+ {
+  "host": "vpn103948172.opengw.net",
+  "port": 1785,
+  "country": "Australia",
+  "country_code": "🇦🇺 AU",
+  "name": "澳大利亚墨尔本 Telstra原生家宽",
+  "isp": "Telstra Limited",
+  "backups": [
+   "vpn759761201.opengw.net:1521",
+   "diamondgnd.opengw.net:443"
+  ]
+ },
+ {
+  "host": "vpn890210379.opengw.net",
+  "port": 1916,
+  "country": "United Kingdom",
+  "country_code": "🇬🇧 UK",
+  "name": "英国伦敦 BT/Virgin原生家宽",
+  "isp": "BT Residential",
+  "backups": [
+   "vpn865239687.opengw.net:1491",
+   "patito.opengw.net:1750"
+  ]
+ },
+ {
+  "host": "vpn579127873.opengw.net",
+  "port": 443,
+  "country": "Germany",
+  "country_code": "🇩🇪 DE",
+  "name": "德国法兰克福 Deutsche Telekom家宽",
+  "isp": "Deutsche Telekom",
+  "backups": [
+   "vpn787143056.opengw.net:1603",
+   "vpn988046136.opengw.net:1575"
+  ]
+ },
+ {
+  "host": "vpn298354206.opengw.net",
+  "port": 1991,
+  "country": "France",
+  "country_code": "🇫🇷 FR",
+  "name": "法国巴黎 Orange/Free原生家宽",
+  "isp": "Orange France",
+  "backups": [
+   "snmarron.opengw.net:992",
+   "vpn770210620.opengw.net:1743"
+  ]
+ },
+ {
+  "host": "vpn949788086.opengw.net",
+  "port": 1513,
+  "country": "Netherlands",
+  "country_code": "🇳🇱 NL",
+  "name": "荷兰阿姆斯特丹 KPN/Ziggo原生家宽",
+  "isp": "KPN Residential",
+  "backups": [
+   "vpn316776003.opengw.net:1517",
+   "vpn579127873.opengw.net:443"
+  ]
+ },
+ {
+  "host": "vpn316776003.opengw.net",
+  "port": 1517,
+  "country": "Belgium",
+  "country_code": "🇧🇪 BE",
+  "name": "比利时布鲁塞尔 Proximus原生家宽",
+  "isp": "Proximus AS",
+  "backups": [
+   "vpn455074928.opengw.net:1880",
+   "vpn967437164.opengw.net:1234"
+  ]
+ },
+ {
+  "host": "vpn239866555.opengw.net",
+  "port": 1843,
+  "country": "Norway",
+  "country_code": "🇳🇴 NO",
+  "name": "挪威奥斯陆 NextGenTel原生家宽",
+  "isp": "NextGenTel AS",
+  "backups": [
+   "vpn339249930.opengw.net:1484",
+   "vpn503120135.opengw.net:1424"
+  ]
+ },
+ {
+  "host": "vpn398736484.opengw.net",
+  "port": 1723,
+  "country": "Italy",
+  "country_code": "🇮🇹 IT",
+  "name": "意大利米兰 TIM/Vodafone原生家宽",
+  "isp": "Telecom Italia",
+  "backups": [
+   "vpn891388714.opengw.net:1952",
+   "vpn337434621.opengw.net:1262"
+  ]
+ },
+ {
+  "host": "cetsssa.opengw.net",
+  "port": 992,
+  "country": "Mexico",
+  "country_code": "🇲🇽 MX",
+  "name": "墨西哥城 Telmex原生家宽",
+  "isp": "Telmex Home",
+  "backups": [
+   "vpn518122287.opengw.net:1960",
+   "vpn861257619.opengw.net:1717"
+  ]
+ },
+ {
+  "host": "vpn940687113.opengw.net",
+  "port": 1771,
+  "country": "Russian Federation",
+  "country_code": "🇷🇺 RU",
+  "name": "俄罗斯莫斯科 Rostelecom原生家宽",
+  "isp": "Rostelecom",
+  "backups": [
+   "vpn146691784.opengw.net:1393",
+   "vpn803706559.opengw.net:1513"
+  ]
+ },
+ {
+  "host": "vpn313985146.opengw.net",
+  "port": 5555,
+  "country": "Ukraine",
+  "country_code": "🇺🇦 UA",
+  "name": "乌克兰基辅 Kyivstar原生家宽",
+  "isp": "Kyivstar Home",
+  "backups": [
+   "vpn661982.opengw.net:7551",
+   "vpn756978111.opengw.net:1223"
+  ]
+ },
+ {
+  "host": "vpn539804093.opengw.net",
+  "port": 1974,
+  "country": "Lithuania",
+  "country_code": "🇱🇹 LT",
+  "name": "立陶宛维尔纽斯 Telia原生家宽",
+  "isp": "Telia Lietuva",
+  "backups": [
+   "vpn765536599.opengw.net:1797",
+   "vpn728522540.opengw.net:1227"
+  ]
+ },
+ {
+  "host": "vpn182344692.opengw.net",
+  "port": 1326,
+  "country": "Colombia",
+  "country_code": "🇨🇴 CO",
+  "name": "哥伦比亚波哥大 Claro/ETB原生家宽",
+  "isp": "Claro Colombia",
+  "backups": [
+   "vpn297018533.opengw.net:1534",
+   "vpn506408150.opengw.net:1846"
+  ]
+ },
+ {
+  "host": "vpn168987812.opengw.net",
+  "port": 1640,
+  "country": "Hungary",
+  "country_code": "🇭🇺 HU",
+  "name": "匈牙利布达佩斯 Magyar Telekom家宽",
+  "isp": "Magyar Telekom",
+  "backups": [
+   "vpn451071809.opengw.net:1940",
+   "vpn418123746.opengw.net:1255"
+  ]
+ },
+ {
+  "host": "vpn231298988.opengw.net",
+  "port": 1953,
+  "country": "United Arab Emirates",
+  "country_code": "🇦🇪 AE",
+  "name": "阿联酋迪拜 Etisalat原生家宽",
+  "isp": "Etisalat Home",
+  "backups": [
+   "vpn847836439.opengw.net:1211",
+   "vpn230691282.opengw.net:1779"
+  ]
+ },
+ {
+  "host": "vpn113281460.opengw.net",
+  "port": 1589,
+  "country": "Thailand",
+  "country_code": "🇹🇭 TH",
+  "name": "泰国曼谷 AIS/3BB光纤家宽",
+  "isp": "Triple T Broadband",
+  "backups": [
+   "vpn287141446.opengw.net:1604",
+   "idcrmn2.opengw.net:444"
+  ]
+ },
+ {
+  "host": "vpn949158831.opengw.net",
+  "port": 1660,
+  "country": "Viet Nam",
+  "country_code": "🇻🇳 VN",
+  "name": "越南河内 VNPT/FPT光纤家宽",
+  "isp": "VNPT Fiber",
+  "backups": [
+   "vpn864131273.opengw.net:995",
+   "vpn706000235.opengw.net:1413"
+  ]
+ }
+]
